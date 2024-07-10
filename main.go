@@ -143,7 +143,8 @@ func ParseClamAvOutput(clamout string, err error) ResultsData {
 		}
 	} else {
 		fmt.Println("[ERROR] empty scan result: ", result)
-		os.Exit(2)
+		// os.Exit(2)
+		return clamAV
 	}
 	// Extract Clam Details from SCAN SUMMARY
 	for _, line := range lines[1:] {
